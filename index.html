@@ -50,66 +50,188 @@
         padding: 14px 16px;
         border-radius: 10px;
       }
+      .lang-toggle {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .lang-button {
+        border: 1px solid #d1d5db;
+        background: #ffffff;
+        color: #111827;
+        padding: 6px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .lang-button[aria-pressed="true"] {
+        background: #111827;
+        color: #ffffff;
+        border-color: #111827;
+      }
+      [data-lang-section][hidden] {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Privacyverklaring - Circle</h1>
-      <p class="muted">Laatst bijgewerkt: [YYYY-MM-DD]</p>
-
-      <p>
-        In deze privacyverklaring leggen we uit welke gegevens we verzamelen, waarom we dat doen en
-        welke keuzes je hebt. Circle is een community app waarin je posts, reacties en media deelt
-        met vrienden en circles.
-      </p>
-
-      <h2>Welke gegevens verzamelen we</h2>
-      <ul>
-        <li>Accountgegevens zoals naam, e-mail, gebruikersnaam en profielfoto.</li>
-        <li>Inhoud die je deelt, zoals posts, reacties, fotos en videos.</li>
-        <li>Instellingen en voorkeuren, bijvoorbeeld privacy, thema en meldingen.</li>
-        <li>Apparaatgegevens die nodig zijn voor meldingen, zoals een push token.</li>
-      </ul>
-
-      <h2>Waarvoor gebruiken we die gegevens</h2>
-      <ul>
-        <li>Om je account te maken, te beheren en veilig te houden.</li>
-        <li>Om jouw content te tonen aan de vrienden en circles die jij kiest.</li>
-        <li>Om instellingen te onthouden en de app beter te laten werken.</li>
-        <li>Om je meldingen te sturen als je dat hebt ingeschakeld.</li>
-      </ul>
-
-      <h2>Camera en media</h2>
-      <p>
-        De app vraagt alleen om cameratoegang wanneer jij een foto of video wilt maken. Je kunt deze
-        toestemming altijd weigeren of intrekken via de instellingen van je apparaat.
-      </p>
-
-      <h2>Delen van gegevens</h2>
-      <p>
-        We delen jouw gegevens alleen met dienstverleners die nodig zijn om de app te laten werken
-        (zoals hosting, opslag en notificaties). We verkopen je gegevens niet.
-      </p>
-
-      <h2>Bewaartermijnen</h2>
-      <p>
-        We bewaren je gegevens zolang je account actief is. Je kunt je account laten verwijderen via
-        Instellingen &gt; Feedback in de app.
-      </p>
-
-      <h2>Jouw keuzes</h2>
-      <ul>
-        <li>Pas je privacyinstellingen aan in de app.</li>
-        <li>Schakel meldingen uit in je apparaatinstellingen.</li>
-        <li>Weiger of intrek cameratoestemming wanneer je wilt.</li>
-      </ul>
-
-      <h2>Contact</h2>
-      <div class="card">
-        <p>
-          Vragen over privacy? Neem contact op via Instellingen &gt; Feedback in de app.
-        </p>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" class="lang-button" data-lang-button="nl" aria-pressed="true">
+          NL
+        </button>
+        <button type="button" class="lang-button" data-lang-button="en" aria-pressed="false">
+          EN
+        </button>
       </div>
+
+      <section data-lang-section="nl">
+        <h1>Privacyverklaring - Circle</h1>
+        <p class="muted">Laatst bijgewerkt: 2026-01-19</p>
+
+        <p>
+          In deze privacyverklaring leggen we uit welke gegevens we verzamelen, waarom we dat doen en
+          welke keuzes je hebt. Circle is een community app waarin je posts, reacties en media deelt
+          met vrienden en circles.
+        </p>
+
+        <h2>Welke gegevens verzamelen we</h2>
+        <ul>
+          <li>Accountgegevens zoals naam, e-mail, gebruikersnaam en profielfoto.</li>
+          <li>Inhoud die je deelt, zoals posts, reacties, fotos en videos.</li>
+          <li>Instellingen en voorkeuren, bijvoorbeeld privacy, thema en meldingen.</li>
+          <li>Apparaatgegevens die nodig zijn voor meldingen, zoals een push token.</li>
+        </ul>
+
+        <h2>Waarvoor gebruiken we die gegevens</h2>
+        <ul>
+          <li>Om je account te maken, te beheren en veilig te houden.</li>
+          <li>Om jouw content te tonen aan de vrienden en circles die jij kiest.</li>
+          <li>Om instellingen te onthouden en de app beter te laten werken.</li>
+          <li>Om je meldingen te sturen als je dat hebt ingeschakeld.</li>
+        </ul>
+
+        <h2>Camera en media</h2>
+        <p>
+          De app vraagt alleen om cameratoegang wanneer jij een foto of video wilt maken. Je kunt deze
+          toestemming altijd weigeren of intrekken via de instellingen van je apparaat.
+        </p>
+
+        <h2>Delen van gegevens</h2>
+        <p>
+          We delen jouw gegevens alleen met dienstverleners die nodig zijn om de app te laten werken
+          (zoals hosting, opslag en notificaties). We verkopen je gegevens niet.
+        </p>
+
+        <h2>Bewaartermijnen</h2>
+        <p>
+          We bewaren je gegevens zolang je account actief is. Je kunt je account laten verwijderen via
+          Instellingen &gt; Feedback in de app.
+        </p>
+
+        <h2>Jouw keuzes</h2>
+        <ul>
+          <li>Pas je privacyinstellingen aan in de app.</li>
+          <li>Schakel meldingen uit in je apparaatinstellingen.</li>
+          <li>Weiger of intrek cameratoestemming wanneer je wilt.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <div class="card">
+          <p>
+            Vragen over privacy? Neem contact op via Instellingen &gt; Feedback in de app.
+          </p>
+        </div>
+      </section>
+
+      <section data-lang-section="en" hidden>
+        <h1>Privacy Policy - Circle</h1>
+        <p class="muted">Last updated: 2026-01-19</p>
+
+        <p>
+          This privacy policy explains what data we collect, why we collect it, and the choices you
+          have. Circle is a community app where you share posts, comments, and media with friends and
+          circles.
+        </p>
+
+        <h2>What data we collect</h2>
+        <ul>
+          <li>Account details such as name, email, username, and profile photo.</li>
+          <li>Content you share, such as posts, comments, photos, and videos.</li>
+          <li>Settings and preferences, for example privacy, theme, and notifications.</li>
+          <li>Device data needed for notifications, such as a push token.</li>
+        </ul>
+
+        <h2>How we use the data</h2>
+        <ul>
+          <li>To create, manage, and secure your account.</li>
+          <li>To show your content to the friends and circles you choose.</li>
+          <li>To remember settings and keep the app working well.</li>
+          <li>To send you notifications if you have enabled them.</li>
+        </ul>
+
+        <h2>Camera and media</h2>
+        <p>
+          The app only requests camera access when you choose to take a photo or video. You can always
+          deny or revoke this permission in your device settings.
+        </p>
+
+        <h2>Sharing data</h2>
+        <p>
+          We share your data only with service providers needed to operate the app (such as hosting,
+          storage, and notifications). We do not sell your data.
+        </p>
+
+        <h2>Retention</h2>
+        <p>
+          We keep your data as long as your account is active. You can request account deletion via
+          Settings &gt; Feedback in the app.
+        </p>
+
+        <h2>Your choices</h2>
+        <ul>
+          <li>Update your privacy settings in the app.</li>
+          <li>Turn off notifications in your device settings.</li>
+          <li>Deny or revoke camera permission whenever you want.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <div class="card">
+          <p>
+            Questions about privacy? Contact us via Settings &gt; Feedback in the app.
+          </p>
+        </div>
+      </section>
     </main>
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll("[data-lang-button]");
+        var sections = document.querySelectorAll("[data-lang-section]");
+        var defaultLang = "nl";
+
+        function setLang(lang) {
+          sections.forEach(function (section) {
+            var isMatch = section.getAttribute("data-lang-section") === lang;
+            section.hidden = !isMatch;
+          });
+          buttons.forEach(function (button) {
+            var isActive = button.getAttribute("data-lang-button") === lang;
+            button.setAttribute("aria-pressed", String(isActive));
+          });
+          document.documentElement.lang = lang;
+        }
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var nextLang = button.getAttribute("data-lang-button") || defaultLang;
+            setLang(nextLang);
+          });
+        });
+
+        setLang(defaultLang);
+      })();
+    </script>
   </body>
 </html>
